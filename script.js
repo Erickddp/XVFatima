@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Lógica Typing Hero
                 if (entry.target.id === 'hero' && !heroTyped) {
                     heroTyped = true;
-                    setTimeout(() => startTyping(typingHero, "CELEBRANDO LA VIDA", 120), 1000);
+                    setTimeout(() => startTyping(typingHero, "CON ILUSIÓN CELEBRO", 120), 1000);
                 }
 
                 // Lógica Typing Protocol
