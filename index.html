@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>XV Fátima - Invitación</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Capa 0: Motor Gráfico Fondo -->
+    <div id="bg-container">
+        <video id="bg-video" autoplay loop muted playsinline>
+            <source src="vid1.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Capa 1: Arquitectura Modular de Arco Floral v7.4 -->
+    <div id="global-garden">
+        <div class="floral-arch arch-top">
+            <img src="flower1.png" class="f-piece f-left" alt="">
+            <img src="flower2.png" class="f-piece f-center" alt="">
+            <img src="flower3.png" class="f-piece f-right" alt="">
+        </div>
+
+        <div id="gold-field" class="gold-field center"></div>
+
+        <div class="floral-arch arch-bottom">
+            <img src="flower3.png" class="f-piece f-left" alt="">
+            <img src="flower1.png" class="f-piece f-center" alt="">
+            <img src="flower2.png" class="f-piece f-right" alt="">
+        </div>
+    </div>
+
+    <!-- Capa 2: Estructura Scroll Snap -->
+    <main class="snap-container">
+
+        <!-- Sección 1: Hero -->
+        <section id="hero" class="snap-page">
+            <div class="hero-content">
+
+                <!-- Countdown Placeholder -->
+                <div class="countdown">
+                    <div class="time-block">
+                        <span class="count-number" id="days">00</span>
+                        <span class="label">DÍAS</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="count-number" id="hours">00</span>
+                        <span class="label">HRS</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="count-number" id="minutes">00</span>
+                        <span class="label">MIN</span>
+                    </div>
+                    <div class="time-block">
+                        <span class="count-number" id="seconds">00</span>
+                        <span class="label">SEC</span>
+                    </div>
+                </div>
+
+                <p class="subtitle" id="typing-text">CON ILUSIÓN CELEBRO</p>
+                <h1 class="title-script">Fátima</h1>
+                <p class="subtitle">Mis XV Años</p>
+
+                <!-- Indicador de Scroll -->
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Protocolo -->
+        <section id="protocol" class="snap-page">
+            <div class="glass-card protocol-card">
+                <p class="text-body proto-intro" style="margin-bottom: 1rem;">Junto a sus padres:</p>
+                <h2 class="names-gold proto-parents">
+                    José Luis Velázquez Reyes <br> & <br> Ana Lilia Salgado Domínguez
+                </h2>
+                <p class="text-body proto-daughter-intro" style="margin-top: 1rem; margin-bottom: 1rem;">Hoy, con el
+                    corazón lleno de gratitud y orgullo,</p>
+                <h1 class="title-script-small proto-daughter">Fátima</h1>
+                <div class="divider" style="margin: 1.2rem auto;"></div>
+                <p class="text-body italic proto-narr paragraph" id="typing-protocol"></p>
+            </div>
+        </section>
+
+        <!-- Sección 3: Logística -->
+        <section id="logistics" class="snap-page">
+            <div class="logistics-header">
+                <h2 class="date-highlight">SÁBADO 25 DE JULIO 2026</h2>
+                <div class="divider-small"></div>
+            </div>
+
+            <!-- Tarjeta 1: Iglesia -->
+            <div class="glass-card event-card">
+                <span class="icon icon-pulse">✝</span>
+                <h3 class="event-title">ACCIÓN DE GRACIAS</h3>
+                <p class="event-time time-massive">1:45 PM</p>
+                <p class="event-location">IGLESIA CANDELARIA</p>
+                <p class="event-address">Coahuila 31, Cuajimalpa</p>
+                <a href="https://maps.app.goo.gl/RhXCHqbL2AyVizRg6" class="btn-glass-gold">📍 Abrir en Google Maps</a>
+            </div>
+
+            <!-- Tarjeta 2: Salón -->
+            <div class="glass-card event-card">
+                <span class="icon">🥂</span>
+                <h3 class="event-title">LA CELEBRACIÓN</h3>
+                <p class="event-time">Después de Misa</p>
+                <p class="event-location">SALÓN CHIMALPA</p>
+                <p class="event-address">Calle del Tecnológico 132</p>
+                <a href="https://maps.app.goo.gl/AcumUg75g6b2EqXHA" class="btn-glass-gold">📍 Abrir en Google Maps</a>
+            </div>
+        </section>
+
+        <!-- Sección 4: Mesa de Regalos -->
+        <section id="gifts" class="snap-page">
+            <div class="glass-card">
+                <h2 class="names-gold">Mesa de Regalos</h2>
+                <p class="text-body" style="margin-bottom:20px;">Tu presencia es nuestro mejor regalo, pero si deseas
+                    tener un detalle:</p>
+                <div class="gift-grid">
+                    <div class="gift-item">
+                        <div style="height: 30px; overflow: hidden; margin-bottom: 5px;">
+                            <img src="logos_mesa.png" class="gift-logo"
+                                style="width: 100px; object-fit: none; object-position: 0 0;">
+                        </div>
+                        <p>Liverpool</p>
+                    </div>
+                    <div class="gift-item">
+                        <div style="height: 30px; overflow: hidden; margin-bottom: 5px;">
+                            <img src="logos_mesa.png" class="gift-logo"
+                                style="width: 100px; object-fit: none; object-position: -50px 0;">
+                        </div>
+                        <p>Palacio</p>
+                    </div>
+                    <div class="gift-item">
+                        <span style="font-size: 1.5rem; display: block;">🏦</span>
+                        <p>Transferencia</p>
+                    </div>
+                    <div class="gift-item">
+                        <span style="font-size: 1.5rem; display: block;">✉️</span>
+                        <p>Sobre</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 5: RSVP / Confirmación -->
+        <section id="rsvp" class="snap-page">
+            <div class="rsvp-photo-bg"></div>
+            <div class="glass-card rsvp-card">
+                <h2 class="names-gold" style="font-size: 1.8rem;">El Gran Día</h2>
+                <p class="text-body" style="margin-bottom: 25px;">Acompáñanos a hacer de este momento algo
+                    verdaderamente inolvidable.</p>
+
+                <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NmhuZTZjNms0a2lzZjVnbDVyY3FjNm5oMDAgZXJpY2tkZHA2MjBAbQ&tmsrc=erickddp620%40gmail.com"
+                    class="btn-glass-massive" id="btn-calendar" target="_blank">
+                    <span class="btn-icon">
+                        <svg class="gc-icon-branded" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8 2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M3 10H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8 14H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 14H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 14H16.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8 18H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 18H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 18H16.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span>AGENDAR EN CALENDARIO</span>
+                </a>
+
+                <div class="divider" style="margin: 20px auto; opacity: 0.3;"></div>
+
+                <p class="text-body" style="font-size: 0.8rem; margin-bottom: 10px;">Por favor, ayúdanos a contemplarte:
+                </p>
+                <a href="https://wa.me/525500000000?text=Hola!+Confirmo+asistencia+a+los+XV+de+Fátima"
+                    class="link-minimal-wa">
+                    <span>Confirma tu asistencia por WhatsApp</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Core Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
