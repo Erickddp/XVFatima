@@ -403,7 +403,7 @@ body {
     margin: 20px auto;
 }
 
-/* Sección 2: Protocolo v7.6 */
+/* Sección 2: Protocolo v7.14 */
 .protocol-card {
     padding: 2.5rem 1.5rem !important;
     min-height: 75vh;
@@ -412,17 +412,31 @@ body {
     justify-content: center;
 }
 
-.proto-parents {
-    color: #E07090; /* Deep Rose Pink */
+.proto-intro, 
+.proto-parents, 
+.proto-daughter-intro {
+    color: var(--gold-light); /* Crema suave / Dorado claro */
     font-family: 'Cinzel', serif;
+}
+
+.proto-parents {
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.5;
+    letter-spacing: 2px;
 }
 
 .proto-daughter {
     text-shadow: 0 0 25px rgba(212, 175, 55, 0.9);
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.proto-narr {
+    color: var(--gold-light);
+    font-style: italic; /* Frase final elegante */
+    line-height: 1.6;
+    letter-spacing: 1px;
 }
 
 /* Secuencia de Revelado Escalonado */
