@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (entry.target.id === 'protocol' && !protoTyped) {
                     protoTyped = true;
                     // Retraso aumentado v7.6 para esperar al revelado secuencial (post-Fátima)
-                    setTimeout(() => startTyping(typingProtocol, "Celebra este hermoso capítulo de su vida acompañada del amor incondicional que siempre la ha guiado.", 100), 2800);
+                    setTimeout(() => startTyping(typingProtocol, "celebro este hermoso capítulo de mi vida rodeada del amor incondicional que siempre me ha guiado.", 100), 2800);
                 }
             }
 
