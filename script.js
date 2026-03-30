@@ -107,3 +107,76 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateCountdown, 1000);
     updateCountdown();
 });
+
+// ── Motor RSVP v8.2 (Modal + Webhook) ──
+const modal = document.getElementById('rsvp-modal');
+const btnOpen = document.getElementById('btn-open-rsvp');
+const btnClose = document.getElementById('close-modal');
+const formRsvp = document.getElementById('rsvp-form');
+const successMsg = document.getElementById('rsvp-success');
+const btnSubmit = document.getElementById('btn-submit-rsvp');
+
+// Controladores de UI
+if (btnOpen && modal) {
+    btnOpen.addEventListener('click', () => modal.classList.remove('hidden'));
+
+    btnClose.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        // Resetear formulario tras animación de salida
+        setTimeout(() => {
+            successMsg.classList.add('hidden');
+            formRsvp.style.display = 'block';
+            btnSubmit.style.display = '';
+            btnSubmit.textContent = 'ENVIAR CONFIRMACIÓN';
+            formRsvp.reset();
+        }, 300);
+    });
+
+    // Cerrar al hacer clic en el fondo del overlay
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) btnClose.click();
+    });
+}
+
+// Transmisión de Datos al Webhook
+if (formRsvp) {
+    formRsvp.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        btnSubmit.textContent = 'ENVIANDO...';
+        btnSubmit.disabled = true;
+
+        // Captura de fecha local formateada (Ej: 29/03/2026, 4:30 PM)
+        const timestamp = new Date().toLocaleString('es-MX', {
+            day: '2-digit', month: '2-digit', year: 'numeric',
+            hour: '2-digit', minute: '2-digit', hour12: true
+        });
+
+        const data = {
+            nombre: document.getElementById('guest-name').value,
+            acompanantes: document.getElementById('guest-companions').value,
+            fecha: timestamp
+        };
+
+        try {
+            // ⚠️  REEMPLAZA ESTA URL CON EL WEBHOOK REAL DE MAKE.COM
+            const webhookUrl = "https://hook.us2.make.com/j2ci1dvlztafpdk62iduyl5wxnidmk73";
+
+            await fetch(webhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            formRsvp.style.display = 'none';
+            successMsg.classList.remove('hidden');
+        } catch (error) {
+            btnSubmit.textContent = 'ERROR. INTENTA DE NUEVO.';
+            console.error('RSVP Webhook error:', error);
+        } finally {
+            btnSubmit.disabled = false;
+            if (!successMsg.classList.contains('hidden')) {
+                btnSubmit.style.display = 'none';
+            }
+        }
+    });
+}

@@ -94,7 +94,7 @@ body {
     font-family: 'Great Vibes', cursive;
     color: var(--gold-light);
     font-size: 6.5rem;
-    text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 15px 0;
     line-height: 1.1;
     z-index: 10;
@@ -163,8 +163,14 @@ body {
     pointer-events: none;
 }
 
-.arch-top { top: 0; }
-.arch-bottom { bottom: 0; transform: rotate(180deg); }
+.arch-top {
+    top: 0;
+}
+
+.arch-bottom {
+    bottom: 0;
+    transform: rotate(180deg);
+}
 
 /* Piezas Individuales: Control de tamaño y fusión profunda */
 .f-piece {
@@ -172,7 +178,7 @@ body {
     width: 45vw;
     max-width: 160px;
     mix-blend-mode: normal;
-    filter: drop-shadow(0 20px 20px rgba(0,0,0,0.95)) brightness(0.7) contrast(1.2);
+    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.95)) brightness(0.7) contrast(1.2);
     opacity: 0.6;
     will-change: transform;
 }
@@ -181,7 +187,8 @@ body {
 .f-left {
     top: -25%;
     left: -15%;
-    transform: rotate(145deg); /* 180° base - 35° rotación individual */
+    transform: rotate(145deg);
+    /* 180° base - 35° rotación individual */
 }
 
 .f-center {
@@ -195,7 +202,8 @@ body {
 .f-right {
     top: -25%;
     right: -15%;
-    transform: rotate(215deg); /* 180° base + 35° rotación individual */
+    transform: rotate(215deg);
+    /* 180° base + 35° rotación individual */
 }
 
 /* Polvo de Oro Vivo (Drift Optimizado) */
@@ -339,7 +347,7 @@ body {
 /* Responsive Focus (9:16) */
 @media (max-width: 450px) {
     .title-script {
-        font-size: 4rem;
+        font-size: 7rem;
     }
 
     .countdown {
@@ -412,10 +420,11 @@ body {
     justify-content: center;
 }
 
-.proto-intro, 
-.proto-parents, 
+.proto-intro,
+.proto-parents,
 .proto-daughter-intro {
-    color: var(--gold-light); /* Crema suave / Dorado claro */
+    color: var(--gold-light);
+    /* Crema suave / Dorado claro */
     font-family: 'Cinzel', serif;
 }
 
@@ -434,24 +443,54 @@ body {
 
 .proto-narr {
     color: var(--gold-light);
-    font-style: italic; /* Frase final elegante */
+    font-style: italic;
+    /* Frase final elegante */
     line-height: 1.6;
     letter-spacing: 1px;
 }
 
 /* Secuencia de Revelado Escalonado */
-.protocol-card > * {
+.protocol-card>* {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#protocol.is-visible .protocol-card > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
-#protocol.is-visible .protocol-card > *:nth-child(2) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
-#protocol.is-visible .protocol-card > *:nth-child(3) { transition-delay: 0.9s; opacity: 1; transform: translateY(0); }
-#protocol.is-visible .protocol-card > *:nth-child(4) { transition-delay: 1.3s; opacity: 1; transform: translateY(0); }
-#protocol.is-visible .protocol-card > *:nth-child(5) { transition-delay: 1.7s; opacity: 1; transform: translateY(0); }
-#protocol.is-visible .protocol-card > *:nth-child(6) { transition-delay: 2.1s; opacity: 1; transform: translateY(0); }
+#protocol.is-visible .protocol-card>*:nth-child(1) {
+    transition-delay: 0.1s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#protocol.is-visible .protocol-card>*:nth-child(2) {
+    transition-delay: 0.5s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#protocol.is-visible .protocol-card>*:nth-child(3) {
+    transition-delay: 0.9s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#protocol.is-visible .protocol-card>*:nth-child(4) {
+    transition-delay: 1.3s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#protocol.is-visible .protocol-card>*:nth-child(5) {
+    transition-delay: 1.7s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#protocol.is-visible .protocol-card>*:nth-child(6) {
+    transition-delay: 2.1s;
+    opacity: 1;
+    transform: translateY(0);
+}
 
 #typing-protocol::after {
     content: '|';
@@ -459,7 +498,9 @@ body {
 }
 
 @keyframes blink-proto {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 /* Estilos de Eventos y Botones */
@@ -494,8 +535,17 @@ body {
 }
 
 @keyframes holyPulse {
-    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px var(--gold)); }
-    50% { transform: scale(1.1); filter: drop-shadow(0 0 15px var(--gold-light)); }
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px var(--gold));
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px var(--gold-light));
+    }
 }
 
 .icon-pulse {
@@ -507,10 +557,12 @@ body {
     position: relative;
     overflow: hidden;
     display: inline-block;
-    background: rgba(212, 175, 55, 0.05); /* Cristal casi transparente */
+    background: rgba(212, 175, 55, 0.05);
+    /* Cristal casi transparente */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(212, 175, 55, 0.5); /* Borde oro fino */
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    /* Borde oro fino */
     color: var(--gold-light);
     text-decoration: none;
     padding: 8px 18px;
@@ -519,7 +571,7 @@ body {
     font-size: 0.75rem;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     margin-top: 5px;
 }
 
@@ -540,8 +592,14 @@ body {
 }
 
 @keyframes shimmer {
-    0% { left: -100%; }
-    20%, 100% { left: 200%; }
+    0% {
+        left: -100%;
+    }
+
+    20%,
+    100% {
+        left: 200%;
+    }
 }
 
 /* Encabezado Logística v7.8 */
@@ -613,7 +671,8 @@ body {
     background-image: url('foto.jpg');
     background-size: cover;
     background-position: center top;
-    opacity: 0.25; /* Sutil y elegante */
+    opacity: 0.25;
+    /* Sutil y elegante */
     filter: grayscale(30%) contrast(1.2);
     /* Fundido hacia negro arriba y abajo */
     mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
@@ -646,7 +705,7 @@ body {
     font-weight: bold;
     font-size: 0.95rem;
     letter-spacing: 2px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -683,7 +742,8 @@ body {
     width: 1.8rem;
     height: 1.8rem;
     display: block;
-    color: var(--gold-light); /* Aplica al stroke del SVG */
+    color: var(--gold-light);
+    /* Aplica al stroke del SVG */
     /* Filtro refinado para SVG nativo */
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
     opacity: 0.95;
@@ -734,4 +794,95 @@ body {
     .title-script-small {
         font-size: 2.8rem;
     }
+}
+
+/* ── Arquitectura Modal RSVP v8.2 ── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.hidden .modal-content {
+    transform: translateY(20px);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--gold);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.close-btn:hover {
+    color: var(--gold-light);
+    transform: scale(1.2);
+}
+
+/* ── Inputs Glassmorphism v8.2 ── */
+.glass-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    color: #FFF;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s, background 0.3s;
+    box-sizing: border-box;
+}
+
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.glass-input:focus {
+    border-color: var(--gold-light);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Ocultar flechas del input type=number */
+.glass-input[type=number]::-webkit-inner-spin-button,
+.glass-input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.glass-input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Clase utilitaria .hidden segura para el formulario */
+.hidden {
+    display: none !important;
 }
